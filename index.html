@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Python Paso a Paso</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #ffcc00;
+        }
+        a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #ffcc00;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Aprende Python Paso a Paso</h1>
+        <p>Guía completa para comenzar a programar en Python.</p>
+    </div>
+
+    <div class="section">
+        <h2>1. ¿Qué es Python?</h2>
+        <p>Python es un lenguaje de programación de alto nivel, interpretado, y de propósito general. Se caracteriza por su legibilidad y simplicidad, lo que lo convierte en una excelente opción tanto para principiantes como para expertos. Es utilizado en desarrollo web, ciencia de datos, inteligencia artificial y automatización.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Instalación de Python</h2>
+        <p>Para comenzar a programar en Python, necesitas instalarlo en tu máquina. Aquí están los pasos:</p>
+        <ol>
+            <li>Visita el sitio oficial de <a href="https://www.python.org/downloads/" target="_blank">Python</a>.</li>
+            <li>Descarga la última versión adecuada para tu sistema operativo (Windows, macOS o Linux).</li>
+            <li>Durante la instalación, asegúrate de marcar la opción "Add Python to PATH". Esto facilita el uso de Python desde la terminal.</li>
+            <li>Una vez instalado, abre una terminal (o símbolo del sistema) y escribe <code>python --version</code> para verificar que se haya instalado correctamente.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>3. Primeros Pasos con Python</h2>
+        <h3>Ejecutar Python en la Terminal</h3>
+        <p>Para comenzar a usar Python, puedes ejecutarlo directamente desde la terminal:</p>
+        <pre>
+python
+# Ahora estás en el intérprete de Python. Puedes probar algunos comandos.
+print("Hola, Mundo!")
+        </pre>
+
+        <h3>Usar un Editor de Texto</h3>
+        <p>También puedes escribir tus programas en un archivo de texto y ejecutarlo. Por ejemplo, crea un archivo llamado <code>hola.py</code>:</p>
+        <pre>
+# hola.py
+print("Hola, Mundo!")
+        </pre>
+        <p>Luego, en la terminal, navega a la carpeta donde guardaste el archivo y ejecuta:</p>
+        <pre>
+python hola.py
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>4. Conceptos Básicos</h2>
+        <h3>Variables y Tipos de Datos</h3>
+        <p>En Python, puedes crear variables y asignarles valores de diferentes tipos:</p>
+        <pre>
+nombre = "Juan"          # Cadena de texto
+edad = 30                # Número entero
+altura = 1.75           # Número de punto flotante
+es_estudiante = True     # Booleano
+        </pre>
+
+        <h3>Estructuras de Control</h3>
+        <p>Las estructuras de control te permiten tomar decisiones y repetir acciones. Aquí hay un ejemplo de un condicional:</p>
+        <pre>
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+        </pre>
+        <p>Y un bucle que imprime números del 0 al 4:</p>
+        <pre>
+for i in range(5):
+    print(i)
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>5. Funciones</h2>
+        <p>Las funciones son bloques de código que realizan una tarea específica. Se definen con la palabra clave <code>def</code>:</p>
+        <pre>
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+print(saludar("Mundo"))  # Salida: Hola, Mundo!
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>6. Módulos y Bibliotecas</h2>
+        <p>Python permite organizar el código en módulos. Puedes importar módulos para usar sus funciones:</p>
+        <pre>
+import math
+
+print(math.sqrt(16))  # Salida: 4.0
+        </pre>
+        <p>También puedes instalar bibliotecas externas utilizando <code>pip</code>, el gestor de paquetes de Python. Por ejemplo, para instalar la biblioteca <code>requests</code>:</p>
+        <pre>
+pip install requests
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>7. Programación Orientada a Objetos (POO)</h2>
+        <p>Python soporta la programación orientada a objetos, lo que permite organizar el código en clases y objetos:</p>
+        <pre>
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        return f"Hola, soy {self.nombre} y tengo {self.edad} años."
+
+persona1 = Persona("Juan", 30)
+print(persona1.saludar())
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>8. Manejo de Excepciones</h2>
+        <p>Python maneja errores mediante excepciones. Esto permite gestionar situaciones inesperadas:</p>
+        <pre>
+try:
+    resultado = 10 / 0
+except ZeroDivisionError:
+    print("No se puede dividir entre cero.")
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>9. Proyectos Sugeridos</h2>
+        <p>Una vez que tengas los conceptos básicos, aquí hay algunas ideas de proyectos para practicar:</p>
+        <ul>
+            <li>Un programa que calcule la suma de una lista de números.</li>
+            <li>Un generador de contraseñas aleatorias.</li>
+            <li>Una calculadora simple.</li>
+            <li>Un juego de adivinanza de números.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>10. Recursos para Aprender Más</h2>
+        <p>Aquí tienes algunos enlaces útiles para aprender más sobre Python:</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/python/" target="_blank">W3Schools Python Tutorial</a></li>
+            <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy Python Course</a></li>
+            <li><a href="https://docs.python.org/3/tutorial/index.html" target="_blank">Documentación oficial de Python</a></li>
+            <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Aprende Python. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
